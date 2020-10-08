@@ -9,12 +9,14 @@ import {MenubarModule} from 'primeng/menubar';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import {HeaderComponent} from './header/header.component';
 import {MapComponent} from './map/map.component';
+import { PopupComponent } from './map/popup/popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MapComponent
+    MapComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

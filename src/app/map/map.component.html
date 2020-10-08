@@ -1,9 +1,15 @@
 <div style="height: 500px;"
      leaflet
+     (leafletMapReady)="onMapReady($event)"
      [leafletOptions]="options"
+     [leafletCenter]="center"
+     [leafletZoom]="zoom"
      [leafletLayersControl]="layersControl"
-     [leafletLayers]="layers"
-     (leafletClick)="handleClick($event)"
-     (leafletDoubleClick)="handleClick($event)"
 >
+  <div *ngFor="let l of layers"
+       [leafletLayer]="l"
+       (leafletLayerAdd)="layerAdded($event)"
+       (leafletLayerRemove)="layerRemoved($event)"
+  >
+  </div>
 </div>
